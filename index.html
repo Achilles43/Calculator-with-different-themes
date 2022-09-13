@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Calculator app</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+  <div class="top-row">
+    <div class="top-left-flex">
+        <span id="calc-span" class="small-font">calc</span>
+    </div>
+    <div class="top-right-flex">
+      <div class="span-theme">
+        <apan id="theme-span">THEME</span>
+        </div>
+        <div class="spans-and-circle">
+        <div class="span-numbers">
+          <span id="span-1">1</span>
+          <span id="span-2">2</span>
+          <span id="span-3">3</span>
+        </div>
+        <div class="circle-div">
+          <div class="small-circle">
+            <div class="circle-inside"></div>
+          </div>
+        </div>
+      </div>
+        
+      </div>
+  </div>
+  <form name="calc">
+  <input type="text" name="text" readonly id="main-input">
+</form>
+  
+  <div class="container">
+    <button class="btn-7" onclick="document.calc.text.value+='7'">7</button>
+    <button class="btn-8" onclick="document.calc.text.value+='8'">8</button>
+    <button class="btn-9" onclick="document.calc.text.value+='9'">9</button>
+    <button id="delete-btn" onclick="del()" >DEL</button>
+    <button class="btn-4" onclick="document.calc.text.value+='4'">4</button>
+    <button class="btn-5" onclick="document.calc.text.value+='5'">5</button>
+    <button class="btn-6" onclick="document.calc.text.value+='6'">6</button>
+    <button class="btn-plus" onclick="document.calc.text.value+='+'">+</button>
+    <button class="btn-1" onclick="document.calc.text.value+='1'">1</button>
+    <button class="btn-2" onclick="document.calc.text.value+='2'">2</button>
+    <button class="btn-3" onclick="document.calc.text.value+='3'">3</button>
+    <button class="btn-minus" onclick="document.calc.text.value+='-'">-</button>
+    <button class="btn-dot" onclick="document.calc.text.value+='.'">.</button>
+    <button class="btn-0" onclick="document.calc.text.value+='0'">0</button>
+    <button class="btn-divide" onclick="document.calc.text.value+='/'">/</button>
+    <button class="btn-multiply" onclick="document.calc.text.value+='*'">x</button>
+    <button id="reset-btn" class="span-2" onclick="document.calc.text.value=''">RESET</button>
+    <button id="equals-btn" class="span-2" onclick="document.calc.text.value= eval(calc.text.value)">=</button>
+  </div>
+</main>
+  <script src="script.js"></script>
+</body>
+</html>
